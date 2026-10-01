@@ -1,0 +1,118 @@
+.pricing-section {
+  padding: 96px 24px;
+  background: #fff;
+  border-bottom: 1px solid var(--border-default);
+}
+
+/* max-width:1180px */
+.pricing-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px;align-items:stretch */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--border-default);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pricing-card.popular {
+  border-color: #dc2626;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #dc2626;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* plan name: font-size:20px, font-weight:700 (PricingCard component inferred) */
+.plan-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--stone-900);
+}
+
+/* plan desc: font-size:15px (inferred) */
+.plan-desc {
+  margin: 0 0 16px;
+  font-size: 15px;
+  color: var(--stone-600);
+}
+
+.plan-price-wrapper {
+  /* margin-top: 24px; */
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+/* price: font-family:var(--font-display); font-size:48px (PricingCard standard) */
+.plan-price {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--stone-900);
+  letter-spacing: -0.02em;
+}
+
+/* unit: font-size:15px */
+.plan-unit {
+  font-size: 15px;
+  color: var(--stone-500);
+}
+
+.plan-features {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+/* feature: font-size:15px */
+.plan-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--stone-700);
+}
+
+.plan-feature svg {
+  flex-shrink: 0;
+  color: #dc2626;
+}
+
+.plan-action {
+  margin-top: 32px;
+  width: 100%;
+}

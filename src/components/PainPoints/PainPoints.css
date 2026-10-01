@@ -1,0 +1,134 @@
+.pain-section {
+  padding: 96px 24px;
+  background: #fff;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.pain-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+.section-head.left {
+  align-items: flex-start;
+  text-align: left;
+  margin: 0;
+  max-width: none;
+}
+
+/* eyebrow: font-family:var(--font-mono);font-size:12px (pain) / 13px (how/pricing)
+   — using 13px as consistent eyebrow size across sections per typography.css */
+.section-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.section-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(28px, 3.5vw, 48px);
+  letter-spacing: -0.02em;
+  color: var(--stone-900);
+}
+
+/* SectionHeading subtitle: font-size:18px (inferred from typography scale) */
+.section-subtitle {
+  margin: 16px 48px 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--stone-600);
+}
+
+/* grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px */
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 20px;
+}
+
+.pain-card {
+  padding: 28px;
+  background: #fff;
+  border: 1px solid var(--border-default);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+  transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pain-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+}
+
+/* num: font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em */
+.pain-num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--stone-400);
+}
+
+/* h3: font-family:var(--font-display);font-weight:500;font-size:19px;letter-spacing:-0.01em */
+.pain-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  color: var(--stone-900);
+}
+
+/* p: font-size:15px;line-height:1.6 */
+.pain-body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--stone-600);
+  text-wrap: pretty;
+}
+
+/* margin-top:auto;padding-top:14px;border-top:1px solid var(--stone-100) */
+.pain-fix {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--stone-100);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* fix label: font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase */
+.fix-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #dc2626;
+}
+
+/* fix text: font-size:14px;line-height:1.55;font-weight:500 */
+.fix-text {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--stone-800);
+  font-weight: 500;
+  text-wrap: pretty;
+}

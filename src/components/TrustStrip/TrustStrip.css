@@ -1,0 +1,33 @@
+.trust-section {
+  background: #fef2f2;
+  border-bottom: 1px solid #fecaca;
+  padding: 28px 24px;
+}
+
+.trust-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.trust-icon {
+  flex-shrink: 0;
+}
+
+/* font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#7f1d1d */
+.trust-text {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7f1d1d;
+}

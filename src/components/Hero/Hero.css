@@ -1,0 +1,328 @@
+.hero-section {
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid var(--border-default);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#fca5a5 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.hero-container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 96px 24px 88px;
+}
+
+/* grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr)) gap:56px */
+.hero-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Badge — hint-size 190px,28px */
+.hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--brand-50);
+  border: 1px solid var(--brand-200);
+  color: var(--brand-700);
+  /* no explicit font-size on badge in HTML — using 13px which was prev */
+  font-size: 13px;
+  font-weight: 500;
+  height: 28px;
+}
+
+/* h1: font-size:clamp(40px,5.2vw,60px); font-weight:500 */
+.hero-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(40px, 5.2vw, 60px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--stone-900);
+  text-wrap: balance;
+}
+
+/* p: font-size:18px; line-height:1.6 */
+.hero-subtitle {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--stone-600);
+  max-width: 520px;
+  text-wrap: pretty;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Button primary lg: hint-size 190px,48px */
+.btn-primary-lg {
+  padding: 0 20px;
+  height: 48px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  background: #dc2626;
+  border: none;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-primary-lg:hover {
+  background: #b91c1c;
+  color: #fff;
+}
+
+/* Button outline lg: hint-size 140px,48px */
+.btn-outline-lg {
+  padding: 0 20px;
+  height: 48px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--stone-900);
+  background: #fff;
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-outline-lg:hover {
+  background: var(--stone-50);
+}
+
+/* bullets: font-size:13px; color:var(--stone-500) */
+.hero-bullets {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--stone-500);
+}
+
+.hero-bullet {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-visual {}
+
+/* Browser mock */
+.browser-mock {
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.browser-header {
+  background: var(--stone-50);
+  border-bottom: 1px solid var(--border-default);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.browser-dots { display: flex; gap: 6px; }
+.b-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+/* url bar: font-family:var(--font-mono); font-size:11px */
+.browser-url-bar {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--border-default);
+  border-radius: 4px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--stone-500);
+}
+
+/* padding:20px; gap:14px */
+.dialer-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #fff;
+}
+
+.dialer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dialer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase */
+.dialer-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone-500);
+}
+
+/* font-size:15px;font-weight:600 */
+.dialer-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--stone-900);
+}
+
+/* live badge: font-size:12px;font-weight:600 */
+.dialer-live {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* border-radius:10px */
+.dialer-table {
+  border: 1px solid var(--border-default);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* dialer row: grid-template-columns:28px 1.4fr 1fr auto; padding:11px 14px; font-size:12px */
+.dialer-row {
+  display: grid;
+  grid-template-columns: 28px 1.4fr 1fr auto;
+  gap: 12px;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--stone-100);
+  font-size: 12px;
+  align-items: center;
+}
+.dialer-row:last-child { border-bottom: none; }
+
+/* L1 label: font-family:var(--font-mono);font-size:11px */
+.dialer-row-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--stone-400);
+}
+
+.dialer-row-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+/* contact name: font-weight:600 (inherits font-size:12px from row) */
+.dialer-name {
+  color: var(--stone-900);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dialer-company {
+  color: var(--stone-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* phone: font-family:var(--font-mono);font-size:11px */
+.dialer-phone {
+  color: var(--stone-500);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* status badge: padding:3px 9px; border-radius:999px; font-size:11px; font-weight:600 */
+.dialer-status {
+  justify-self: end;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dialer-stats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* stat box: flex:1;min-width:120px;padding:10px 12px; border-radius:8px */
+.stat-box {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* stat label: font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase */
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone-500);
+}
+
+/* stat value: font-size:16px;font-weight:700 */
+.stat-val {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--stone-900);
+}
+.stat-val.red {
+  color: #dc2626;
+}
