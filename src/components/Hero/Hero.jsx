@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import './Hero.css';
 
 const linesData = [
-  { n: 1, name: 'Priya Raman', company: 'Loopwise', phone: '(415) 555-0142', status: 'Connected', bg: '#dc2626', fg: '#fff', rowBg: '#fef2f2' },
-  { n: 2, name: 'Daniel Ortiz', company: 'Fieldnote', phone: '(212) 555-0187', status: 'Ringing', bg: 'var(--stone-100)', fg: 'var(--stone-700)', rowBg: '#fff' },
-  { n: 3, name: 'Maya Chen', company: 'Stackform', phone: '(646) 555-0119', status: 'Voicemail dropped', bg: '#fee2e2', fg: '#991b1b', rowBg: '#fff' },
-  { n: 4, name: 'Jonas Weber', company: 'Brightpath', phone: '(512) 555-0163', status: 'Ringing', bg: 'var(--stone-100)', fg: 'var(--stone-700)', rowBg: '#fff' },
-  { n: 5, name: 'Aisha Khan', company: 'Parcelry', phone: '(303) 555-0128', status: 'No answer', bg: 'var(--stone-50)', fg: 'var(--stone-500)', rowBg: '#fff' }
+  { n: 1, name: 'Priya Raman', company: 'Loopwise', phone: '(415) 555-0142', status: 'Connected', statusClass: 'status-connected' },
+  { n: 2, name: 'Daniel Ortiz', company: 'Fieldnote', phone: '(212) 555-0187', status: 'Ringing', statusClass: 'status-ringing' },
+  { n: 3, name: 'Maya Chen', company: 'Stackform', phone: '(646) 555-0119', status: 'Voicemail dropped', statusClass: 'status-voicemail' },
+  { n: 4, name: 'Jonas Weber', company: 'Brightpath', phone: '(512) 555-0163', status: 'Ringing', statusClass: 'status-ringing' },
+  { n: 5, name: 'Aisha Khan', company: 'Parcelry', phone: '(303) 555-0128', status: 'No answer', statusClass: 'status-no-answer' }
 ];
 
 const Hero = () => {
@@ -72,9 +72,9 @@ const Hero = () => {
             <div className="browser-mock">
               <div className="browser-header">
                 <div className="browser-dots">
-                  <span className="b-dot" style={{background:'#ef4444'}}></span>
-                  <span className="b-dot" style={{background:'#f59e0b'}}></span>
-                  <span className="b-dot" style={{background:'#10b981'}}></span>
+                  <span className="b-dot b-dot-red"></span>
+                  <span className="b-dot b-dot-yellow"></span>
+                  <span className="b-dot b-dot-green"></span>
                 </div>
                 <div className="browser-url-bar">
                   app.terranode.com/dialer
@@ -95,14 +95,14 @@ const Hero = () => {
 
                 <div className="dialer-table">
                   {linesData.map((l) => (
-                    <div key={l.n} className="dialer-row" style={{ backgroundColor: l.rowBg }}>
+                    <div key={l.n} className={`dialer-row ${l.statusClass}-row`}>
                       <span className="dialer-row-num">L{l.n}</span>
                       <div className="dialer-row-contact">
                         <span className="dialer-name">{l.name}</span>
                         <span className="dialer-company">{l.company}</span>
                       </div>
                       <span className="dialer-phone">{l.phone}</span>
-                      <span className="dialer-status" style={{ backgroundColor: l.bg, color: l.fg }}>
+                      <span className={`dialer-status ${l.statusClass}`}>
                         {l.status}
                       </span>
                     </div>

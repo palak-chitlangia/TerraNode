@@ -56,6 +56,13 @@
   color: var(--stone-600);
 }
 
+@media (max-width: 768px) {
+  .section-subtitle {
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
 /* grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px */
 .pain-grid {
   display: grid;

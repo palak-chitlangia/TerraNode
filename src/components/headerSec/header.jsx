@@ -3,9 +3,19 @@ import './header.css';
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const openSidebar = () => setSidebarOpen(true);
   const closeSidebar = () => setSidebarOpen(false);
+
+  // Handle scroll to add background effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Lock body scroll when sidebar is open
   useEffect(() => {
@@ -20,7 +30,7 @@ const Header = () => {
   return (
     <>
       {/* ─── Main Header ─────────────────────────── */}
-      <header className="tn-header">
+      <header className={`tn-header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="tn-header-container">
 
           <a href="#" className="tn-brand-logo">

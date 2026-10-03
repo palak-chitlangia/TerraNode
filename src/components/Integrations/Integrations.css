@@ -4,6 +4,10 @@
   border-bottom: 1px solid var(--border-default);
 }
 
+.integrations-section .section-subtitle {
+  margin: 0;
+}
+
 /* max-width:1080px; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px */
 .integrations-container {
   max-width: 1080px;
@@ -77,3 +81,4 @@
   font-size: 13px;
   color: var(--stone-500);
 }
+.btn-integrations { height: 40px; }

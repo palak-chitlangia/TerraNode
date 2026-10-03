@@ -10,7 +10,7 @@ import Footer from '../components/footerSec/footer';
 
 const Home = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', width: '100%' }}>
+    <div className="home-container">
       <Header />
       <main>
         <Hero />

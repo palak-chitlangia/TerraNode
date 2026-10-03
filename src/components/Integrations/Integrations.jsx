@@ -20,7 +20,7 @@ const Integrations = () => {
               Connect once and TerraNode syncs calls, recordings, transcripts and outcomes to the contact record automatically.
             </p>
           </div>
-          <a href="#" className="btn-outline-lg" style={{ height: '40px' }}>See All Integrations</a>
+          <a href="#" className="btn-outline-lg btn-integrations">See All Integrations</a>
         </div>
 
         <div className="integrations-grid">

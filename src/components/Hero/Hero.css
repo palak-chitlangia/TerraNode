@@ -326,3 +326,18 @@
 .stat-val.red {
   color: #dc2626;
 }
+.b-dot-red { background: #ef4444; }
+.b-dot-yellow { background: #f59e0b; }
+.b-dot-green { background: #10b981; }
+
+.status-connected { background-color: #dc2626; color: #fff; }
+.status-connected-row { background-color: #fef2f2; }
+
+.status-ringing { background-color: var(--stone-100); color: var(--stone-700); }
+.status-ringing-row { background-color: #fff; }
+
+.status-voicemail { background-color: #fee2e2; color: #991b1b; }
+.status-voicemail-row { background-color: #fff; }
+
+.status-no-answer { background-color: var(--stone-50); color: var(--stone-500); }
+.status-no-answer-row { background-color: #fff; }
